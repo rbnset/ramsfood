@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Testing sentry.io (Bug Tracking)
+Route::get('/debug-sentry', function () {
+    throw new Exception('My first Sentry error!');
+});
